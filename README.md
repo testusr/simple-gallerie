@@ -178,7 +178,7 @@ There is in update guide where you can choose from which version to which versio
 # Quarkus
 
 Besided Quarkus being a trendy technology that is worth learning it comes with some benefits which are valuable for the project that
-could speed up development.
+could speed up development by combingin all relevant components in one quarkus instance and all of the support live reloading of changes, this could be quite a development boost.
 
 - **Live Reloading of changes** - in dev mode quarkus will detect changed files and i again hit with a request this changes will be detected and the code rebuild/reloaded
 - **Angular Support** - via the quinoa plugin, angular frontends get get directly deployed with quarkus, so we can skip using node for a while
@@ -201,6 +201,35 @@ cd getting-started
 ```
 ./mvnw quarkus:dev
 ```
+
+### Database
+
+**installing psql on the mac**
+
+```
+brew doctor
+brew update
+brew install libpq
+```
+
+```
+brew link --force libpq
+```
+
+```
+truehl@Thorstens-MacBook-Pro-2 ~ % psql --version
+psql (PostgreSQL) 17.5
+
+```
+
+```
+postgresql://quarkus:quarkus@localhost:62474
+```
+
+#### Hiberante
+
+[Quarkus-Hibernate Turial](https://www.youtube.com/watch?v=tsBW6Bed46M)
+[hibernat-orm docs](https://quarkus.io/guides/hibernate-orm)
 
 ### Youtube
 
